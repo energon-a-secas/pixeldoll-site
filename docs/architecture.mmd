@@ -1,0 +1,35 @@
+---
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#0f172a"
+    primaryTextColor: "#e2e8f0"
+    primaryBorderColor: "#0063e5"
+    lineColor: "#38bdf8"
+    secondaryColor: "#1e293b"
+    tertiaryColor: "#1e293b"
+    clusterBkg: "#f0f7ff"
+    clusterBorder: "#bfdbfe"
+    edgeLabelBackground: "#e8f0ff"
+    mainBkg: "#0f172a"
+    nodeBorder: "#0063e5"
+    titleColor: "#1e1b4b"
+    fontFamily: "ui-sans-serif, system-ui, -apple-system, sans-serif"
+    fontSize: "13px"
+---
+flowchart TB
+    User([User]) --> HTML["index.html\nStudio shell"]
+
+    subgraph App["ES Modules"]
+        HTML --> app["app.js\nEntry point"]
+        app --> state["state.js\nDraft spec + name"]
+        app --> render["render.js\nHero, tiles, colours, secrets"]
+        app --> events["events.js\nClicks, keys, unlock celebrations"]
+        events --> wardrobe["wardrobe.js\nUnlock rules"]
+        events --> exportm["export.js\nCode, link, PNG"]
+        render & state & exportm --> kit["neorgon-avatar.js\nShared Avatar Kit (vendored)"]
+    end
+
+    state <-->|"paperdoll-v1"| Storage[("localStorage")]
+    kit <-->|"neo_character / neo_unlocks"| Cookie[("*.neorgon.com cookie")]
+    Cookie --> Floorplan["floorplan.neorgon.com\nUse my character"]
