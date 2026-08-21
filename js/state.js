@@ -6,8 +6,8 @@
 import * as K from './neorgon-avatar.js'
 import { debounce } from './utils.js'
 
-export const STORAGE_KEY = 'paperdoll-v1'
-export const state = { spec: K.seededSpec('paperdoll', { shirt: '#ec4899' }), name: '', savedAt: null }
+export const STORAGE_KEY = 'pixeldoll-v1'
+export const state = { spec: K.seededSpec('pixeldoll', { shirt: '#ec4899' }), name: '', savedAt: null }
 export const ui = { tab: 'kind', unlocked: K.readUnlocks(), shuffles: 0, secretsOpen: false, freshUnlock: null, shared: null }
 
 export function setPart(slot, id) { if (K.CATALOG[slot]?.some(p => p.id === id)) { state.spec = K.normalizeSpec({ ...state.spec, [slot]: id }) } }

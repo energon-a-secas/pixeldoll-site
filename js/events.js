@@ -42,7 +42,7 @@ function runAction(action, el) {
     case 'copy-code': copyCode(); break
     case 'copy-link': copyLink(); break
     case 'png': downloadPng(Number(el.dataset.scale) || 16); break
-    case 'reset': setSpec(K.seededSpec(state.name || 'paperdoll', { shirt: '#ec4899' })); save(); render(); showToast('Back to the seeded look'); break
+    case 'reset': setSpec(K.seededSpec(state.name || 'pixeldoll', { shirt: '#ec4899' })); save(); render(); showToast('Back to the seeded look'); break
     case 'toggle-secrets': ui.secretsOpen = !ui.secretsOpen; renderSecrets(); if (ui.secretsOpen) $('secretCode')?.focus(); break
     case 'use-shared': if (ui.shared) { setSpec(ui.shared.spec); if (ui.shared.name) setName(ui.shared.name); ui.shared = null; $('sharedBar').hidden = true; save(); render(); showToast('Now editing the shared character') } break
     case 'dismiss-shared': ui.shared = null; $('sharedBar').hidden = true; break

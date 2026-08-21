@@ -1,9 +1,9 @@
-# CLAUDE.md: Paperdoll
+# CLAUDE.md: Pixeldoll
 
 Pixel character builder over the shared Neorgon Avatar Kit: nine slots, 62 parts, colours,
 rare parts behind unlocks, and a "my character" cookie that other sites (Floorplan) read.
 
-**Live:** paperdoll.neorgon.com · **Port:** 8869
+**Live:** pixeldoll.neorgon.com · **Port:** 8869
 
 ## Run
 
@@ -18,7 +18,7 @@ Then open http://localhost:8869. ES modules, so `file://` does not work. No depe
 | Module | Owns |
 |---|---|
 | `js/neorgon-avatar.js` | **vendored** Neorgon Avatar Kit (canonical `packages/neorgon-ui/avatar/avatar.js`): catalog, drawing, codes, cookies. Never edit here; `packages/neorgon-ui/sync-avatar.sh` |
-| `js/state.js` | the draft (`spec`, `name`, `savedAt`) in localStorage `paperdoll-v1`; `saveMyCharacter()` writes the `neo_character` cookie through the kit |
+| `js/state.js` | the draft (`spec`, `name`, `savedAt`) in localStorage `pixeldoll-v1`; `saveMyCharacter()` writes the `neo_character` cookie through the kit |
 | `js/wardrobe.js` | unlock ids, hints and triggers (shuffle streak, named save, Konami, three code words); `grant()` writes `neo_unlocks` |
 | `js/render.js` | hero canvas at 8x, the sizes row (64/32/16), tabs, tiles drawn as the current character wearing each part, colour rows, actions, secrets |
 | `js/events.js` | delegated clicks/inputs/keys; `celebrate()` opens the secrets panel on a fresh unlock |

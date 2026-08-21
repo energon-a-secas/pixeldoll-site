@@ -1,15 +1,15 @@
-# Paperdoll
+# Pixeldoll
 
 > Pixel character builder. Build a 16x16 character, unlock rare parts, save it as yours across every Neorgon site.
 
-- Live: https://paperdoll.neorgon.com/
+- Live: https://pixeldoll.neorgon.com/
 - Part of the Neorgon tool suite (free, no signup, runs in your browser): https://neorgon.com/
 - Keywords: pixel art, avatar, character builder, sprite, dress-up, unlockables, Floorplan
 
 ## Files for agents
 
-- [This file](https://paperdoll.neorgon.com/llms.txt): the spec, the code format, the link contract, the cookies, and how to generate a character
-- [Avatar Kit source](https://github.com/energon-a-secas/paperdoll-site/blob/main/js/neorgon-avatar.js): the engine this site and Floorplan share (canonical in the Neorgon monorepo at packages/neorgon-ui/avatar)
+- [This file](https://pixeldoll.neorgon.com/llms.txt): the spec, the code format, the link contract, the cookies, and how to generate a character
+- [Avatar Kit source](https://github.com/energon-a-secas/pixeldoll-site/blob/main/js/neorgon-avatar.js): the engine this site and Floorplan share (canonical in the Neorgon monorepo at packages/neorgon-ui/avatar)
 
 ## The spec
 
@@ -34,7 +34,7 @@ Unknown ids fall back to the default; a spec never fails to render.
 
 ## The code and the link
 
-A character travels as `neoav1:<base64url of the JSON spec with only the non-default fields>`. Open one in the builder with `https://paperdoll.neorgon.com/#c=<code>&name=<name>`. Floorplan's person sheet accepts the same code (or the link), and in Floorplan YAML it is `avatar: "neoav1:..."`.
+A character travels as `neoav1:<base64url of the JSON spec with only the non-default fields>`. Open one in the builder with `https://pixeldoll.neorgon.com/#c=<code>&name=<name>`. Floorplan's person sheet accepts the same code (or the link), and in Floorplan YAML it is `avatar: "neoav1:..."`.
 
 To generate one: write the JSON above (any subset), base64url it (standard base64, `+` to `-`, `/` to `_`, no padding), prefix `neoav1:`.
 Python: `"neoav1:" + base64.urlsafe_b64encode(json.dumps(spec, separators=(",",":")).encode()).decode().rstrip("=")`

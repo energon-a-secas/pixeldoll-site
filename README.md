@@ -1,6 +1,6 @@
 <div align="center">
 
-# Paperdoll
+# Pixeldoll
 
 Build a pixel character and take it across Neorgon
 
@@ -18,7 +18,7 @@ Build a pixel character and take it across Neorgon
 [badge-claude]:  https://img.shields.io/badge/Claude_Code-CC785C?style=for-the-badge&logo=anthropic&logoColor=white
 [badge-license]: https://img.shields.io/badge/license-MIT-404040?style=for-the-badge
 
-[url-site]:   https://paperdoll.neorgon.com/
+[url-site]:   https://pixeldoll.neorgon.com/
 [url-html]:   #
 [url-css]:    #
 [url-js]:     #
@@ -30,9 +30,9 @@ Build a pixel character and take it across Neorgon
 
 ## Overview
 
-Paperdoll builds a 16x16 pixel character part by part: kind (person, cat, dog, robot, and two you have to find), hair, eyes, face, outfit, head, extras, a held item, a pet, and colours. Save it as **your character** and every Neorgon site that draws people (Floorplan first) can use it; copy it as a code or a link to share or to put on someone else's seat. Rare and legendary parts unlock by doing things, and the unlocks follow you across the fleet.
+Pixeldoll builds a 16x16 pixel character part by part: kind (person, cat, dog, robot, and two you have to find), hair, eyes, face, outfit, head, extras, a held item, a pet, and colours. Save it as **your character** and every Neorgon site that draws people (Floorplan first) can use it; copy it as a code or a link to share or to put on someone else's seat. Rare and legendary parts unlock by doing things, and the unlocks follow you across the fleet.
 
-**Live:** paperdoll.neorgon.com
+**Live:** pixeldoll.neorgon.com
 
 ---
 
@@ -68,7 +68,7 @@ python3 -m http.server 8869
 ![Architecture](docs/architecture.svg)
 
 ```
-paperdoll-site/
+pixeldoll-site/
 ├── index.html              # studio: preview, wardrobe, secrets
 ├── llms.txt                # spec, code format, cookies, unlocks for agents
 ├── css/

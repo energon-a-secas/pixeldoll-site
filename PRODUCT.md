@@ -1,4 +1,4 @@
-# Paperdoll: product one-pager
+# Pixeldoll: product one-pager
 
 **What it is:** Build a pixel character and take it across Neorgon. A 16x16 character builder over the shared Neorgon Avatar Kit: kinds, hair, outfits, hats, held items, pets, colours, with rare parts that unlock by doing things.
 

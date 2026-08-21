@@ -15,7 +15,7 @@ const TIER_LABEL = { rare: 'Rare', legendary: 'Legendary' }
 
 export function render() {
   renderHero(); renderTabs(); renderGrid(); renderColors(); renderActions(); renderSecrets()
-  document.title = (state.name ? state.name + ' · ' : '') + 'Paperdoll | Pixel Character Builder'
+  document.title = (state.name ? state.name + ' · ' : '') + 'Pixeldoll | Pixel Character Builder'
 }
 
 export function renderHero() {
